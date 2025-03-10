@@ -37,22 +37,22 @@
   }
 
   .dark {
-    --background: 217 19% 15%;
+    --background: 217 19% 10%; /* Darker background */
     --foreground: 210 40% 98%;
 
-    --card: 217 19% 15%;
+    --card: 217 19% 10%; /* Darker card background */
     --card-foreground: 210 40% 98%;
 
-    --popover: 217 19% 15%;
+    --popover: 217 19% 10%; /* Darker popover background */
     --popover-foreground: 210 40% 98%;
 
     --primary: 60 80% 55%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 217 19% 20%;
+    --secondary: 217 19% 15%; /* Darker secondary background */
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217 19% 20%;
+    --muted: 217 19% 15%; /* Darker muted background */
     --muted-foreground: 215 20.2% 75.1%;
 
     --accent: 60 80% 55%;
@@ -61,8 +61,8 @@
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217 19% 20%;
-    --input: 217 19% 20%;
+    --border: 217 19% 15%; /* Darker border */
+    --input: 217 19% 15%; /* Darker input */
     --ring: 60 80% 55%;
   }
 }
@@ -73,7 +73,7 @@
   }
 
   body {
-    @apply bg-olly-dark text-olly-white dark;
+    @apply bg-olly-dark-deep text-olly-white dark; /* Updated background color */
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
 
