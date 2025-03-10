@@ -30,6 +30,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", path: "/" },
+    { name: "Blog", path: "/blog" },
     { name: "Careers", path: "/careers" },
   ];
 

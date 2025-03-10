@@ -67,6 +67,7 @@ export default {
 				olly: {
 					accent: '#e2e735',
 					dark: '#24272a',
+					'dark-deep': '#1a1d20',
 					white: '#ffffff',
 				}
 			},
