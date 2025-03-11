@@ -13,6 +13,7 @@ interface Job {
   type: string;
   description: string;
   category: string;
+  salary: string;
   requirements: string[];
   responsibilities?: string[];
 }
@@ -38,6 +39,7 @@ export default function JobDetail() {
             location: "Remote",
             type: "Full-time",
             category: "frontend",
+            salary: "$90,000 - $120,000",
             description: "Join our team to build intuitive and responsive user interfaces that transform complex telemetry data into actionable insights.",
             requirements: [
               "3+ years of experience with React and modern JavaScript",
@@ -60,6 +62,7 @@ export default function JobDetail() {
             location: "Remote",
             type: "Full-time",
             category: "data",
+            salary: "$110,000 - $150,000",
             description: "Apply your expertise in data science to help us extract meaningful patterns and insights from vast quantities of telemetry data.",
             requirements: [
               "Advanced degree in Computer Science, Statistics, or related field",
@@ -82,6 +85,7 @@ export default function JobDetail() {
             location: "Remote",
             type: "Full-time",
             category: "backend",
+            salary: "$95,000 - $135,000",
             description: "Develop robust, scalable backend systems that process and analyze telemetry data from diverse sources in real-time.",
             requirements: [
               "5+ years of experience in backend development",
@@ -179,6 +183,9 @@ export default function JobDetail() {
                   </span>
                   <span className="text-sm bg-white/10 px-3 py-1 rounded-full text-olly-white/70">
                     {job.category}
+                  </span>
+                  <span className="text-sm bg-olly-accent/20 px-3 py-1 rounded-full text-olly-accent font-medium">
+                    {job.salary}
                   </span>
                 </div>
                 <p className="text-olly-white/90 text-lg">{job.description}</p>

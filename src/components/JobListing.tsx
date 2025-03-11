@@ -12,6 +12,7 @@ interface JobListingProps {
   type: string;
   description: string;
   requirements: string[];
+  salary?: string;
 }
 
 export default function JobListing({ 
@@ -20,7 +21,8 @@ export default function JobListing({
   location, 
   type, 
   description, 
-  requirements 
+  requirements,
+  salary
 }: JobListingProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   
@@ -47,6 +49,11 @@ export default function JobListing({
             <span className="text-sm bg-white/10 px-2 py-1 rounded-full text-olly-white/70">
               {type}
             </span>
+            {salary && (
+              <span className="text-sm bg-olly-accent/20 px-2 py-1 rounded-full text-olly-accent font-medium">
+                {salary}
+              </span>
+            )}
             <ChevronDown 
               className={cn(
                 "text-olly-accent transition-transform duration-300",
