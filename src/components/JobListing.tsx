@@ -1,10 +1,12 @@
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ChevronDown, Check } from "lucide-react";
+import { ChevronDown, ChevronRight, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface JobListingProps {
+  id: number;
   title: string;
   location: string;
   type: string;
@@ -13,6 +15,7 @@ interface JobListingProps {
 }
 
 export default function JobListing({ 
+  id,
   title, 
   location, 
   type, 
@@ -81,20 +84,35 @@ export default function JobListing({
             </ul>
           </div>
           
-          <button 
-            className={cn(
-              "w-full md:w-auto px-6 py-3 rounded-md font-medium",
-              "bg-olly-accent text-olly-dark hover:bg-olly-accent/90",
-              "transition-all duration-300 focus:ring-2 focus:ring-olly-accent/50"
-            )}
-            onClick={(e) => {
-              e.stopPropagation();
-              // This would typically link to an application form
-              alert("Application process would start here");
-            }}
-          >
-            Apply Now
-          </button>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <button 
+              className={cn(
+                "px-6 py-3 rounded-md font-medium",
+                "bg-olly-accent text-olly-dark hover:bg-olly-accent/90",
+                "transition-all duration-300 focus:ring-2 focus:ring-olly-accent/50"
+              )}
+              onClick={(e) => {
+                e.stopPropagation();
+                // This would typically link to an application form
+                alert("Application process would start here");
+              }}
+            >
+              Apply Now
+            </button>
+            
+            <Link
+              to={`/careers/${id}`}
+              className={cn(
+                "inline-flex items-center justify-center px-6 py-3 rounded-md font-medium",
+                "border border-olly-accent/30 text-olly-accent hover:bg-olly-accent/10",
+                "transition-all duration-300 focus:ring-2 focus:ring-olly-accent/50"
+              )}
+              onClick={(e) => e.stopPropagation()}
+            >
+              View Details
+              <ChevronRight size={16} className="ml-1" />
+            </Link>
+          </div>
         </div>
       </motion.div>
     </motion.div>

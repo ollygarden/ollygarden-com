@@ -155,6 +155,7 @@ export default function Careers() {
                 filteredJobs.map(job => (
                   <JobListing
                     key={job.id}
+                    id={job.id}
                     title={job.title}
                     location={job.location}
                     type={job.type}
