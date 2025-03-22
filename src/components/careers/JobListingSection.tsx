@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -72,6 +73,7 @@ export default function JobListingSection({ jobs }: JobListingSectionProps) {
                   type={job.type}
                   description={job.description}
                   requirements={job.requirements}
+                  bonusPoints={job.bonusPoints} // Pass bonus points to the component
                 />
               ))
             ) : (

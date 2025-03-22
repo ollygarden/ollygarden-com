@@ -2,16 +2,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ChevronDown, ChevronRight, Check } from "lucide-react";
+import { ChevronDown, ChevronRight, Check, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface JobListingProps {
-  id: string; // Changed from number to string to match the job data
+  id: string;
   title: string;
   location: string;
   type: string;
   description: string;
   requirements: string[];
+  bonusPoints?: string[]; // Add bonus points as an optional prop
   salary?: string;
 }
 
@@ -22,6 +23,7 @@ export default function JobListing({
   type, 
   description, 
   requirements,
+  bonusPoints, // Add bonus points to destructuring
   salary
 }: JobListingProps) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -90,6 +92,21 @@ export default function JobListing({
               ))}
             </ul>
           </div>
+          
+          {/* Add Bonus Points section */}
+          {bonusPoints && bonusPoints.length > 0 && (
+            <div className="mb-4">
+              <h4 className="font-medium text-olly-accent mb-3">Bonus Points</h4>
+              <ul className="space-y-2">
+                {bonusPoints.map((point, index) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <Plus size={18} className="text-olly-accent mt-0.5 shrink-0" />
+                    <span className="text-olly-white/90 text-sm">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           
           <div className="flex flex-col sm:flex-row gap-3">
             <button 
