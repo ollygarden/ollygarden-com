@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ExternalLink } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function Navbar() {
@@ -29,9 +29,9 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "Blog", path: "/blog" },
-    { name: "Careers", path: "/careers" },
+    { name: "Home", path: "/", isExternal: false },
+    { name: "Blog", path: "https://blog.olly.garden", isExternal: true },
+    { name: "Careers", path: "/careers", isExternal: false },
   ];
 
   return (
@@ -53,17 +53,30 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={cn(
-                "text-olly-white hover:text-olly-accent font-medium transition-all-300 relative",
-                location.pathname === link.path && "text-olly-accent",
-                location.pathname === link.path && "after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-olly-accent"
-              )}
-            >
-              {link.name}
-            </Link>
+            link.isExternal ? (
+              <a
+                key={link.path}
+                href={link.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-olly-white hover:text-olly-accent font-medium transition-all-300 relative inline-flex items-center"
+              >
+                {link.name}
+                <ExternalLink size={14} className="ml-1" />
+              </a>
+            ) : (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={cn(
+                  "text-olly-white hover:text-olly-accent font-medium transition-all-300 relative",
+                  location.pathname === link.path && "text-olly-accent",
+                  location.pathname === link.path && "after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-olly-accent"
+                )}
+              >
+                {link.name}
+              </Link>
+            )
           ))}
         </nav>
 
@@ -86,16 +99,29 @@ export default function Navbar() {
           >
             <nav className="flex flex-col space-y-6 items-center">
               {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={cn(
-                    "text-olly-white hover:text-olly-accent text-xl font-medium transition-all-300",
-                    location.pathname === link.path && "text-olly-accent"
-                  )}
-                >
-                  {link.name}
-                </Link>
+                link.isExternal ? (
+                  <a
+                    key={link.path}
+                    href={link.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-olly-white hover:text-olly-accent text-xl font-medium transition-all-300 inline-flex items-center"
+                  >
+                    {link.name}
+                    <ExternalLink size={16} className="ml-1.5" />
+                  </a>
+                ) : (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className={cn(
+                      "text-olly-white hover:text-olly-accent text-xl font-medium transition-all-300",
+                      location.pathname === link.path && "text-olly-accent"
+                    )}
+                  >
+                    {link.name}
+                  </Link>
+                )
               ))}
             </nav>
           </div>

@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import { ExternalLink } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -25,6 +26,15 @@ export default function Footer() {
             >
               Home
             </Link>
+            <a
+              href="https://blog.olly.garden"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-olly-white/80 hover:text-olly-accent transition-all-300 text-sm inline-flex items-center"
+            >
+              Blog
+              <ExternalLink size={12} className="ml-1" />
+            </a>
             <Link
               to="/careers"
               className="text-olly-white/80 hover:text-olly-accent transition-all-300 text-sm"
