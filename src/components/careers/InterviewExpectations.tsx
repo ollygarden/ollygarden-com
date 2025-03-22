@@ -1,32 +1,32 @@
 
 import { motion } from "framer-motion";
-import { SeedlingIcon, CodeIcon, ToolIcon, TrophyIcon, SmileIcon } from "lucide-react";
+import { Sprout, Code, Wrench, Trophy, Smile } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function InterviewExpectations() {
   const expectations = [
     {
-      icon: SeedlingIcon,
+      icon: Sprout,
       title: "Show Us Your Growth",
       description: "Share how you start your projects, how you evolve them, and how you decide when a feature is complete. We want to see your development process from seed to harvest."
     },
     {
-      icon: CodeIcon,
+      icon: Code,
       title: "Share Your Code",
       description: "We love seeing your code, especially pet projects you're passionate about. B2B SaaS applications are particularly relevant to our work."
     },
     {
-      icon: ToolIcon,
+      icon: Wrench,
       title: "Demonstrate Your Tools",
       description: "Show us how you use AI to boost productivity, your preferred hosting solutions, and other tools that help your garden of code flourish."
     },
     {
-      icon: TrophyIcon,
+      icon: Trophy,
       title: "Celebrate Achievements",
       description: "Tell us about things that made you proud. It's the perfect time to brag about your work and showcase your accomplishments."
     },
     {
-      icon: SmileIcon,
+      icon: Smile,
       title: "Express Your Passion",
       description: "Share what excites you about development, observability, or technology in general. Your enthusiasm is as important as your skills."
     }
