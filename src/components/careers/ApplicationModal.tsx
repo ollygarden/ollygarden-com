@@ -46,11 +46,11 @@ export default function ApplicationModal({ open, onOpenChange, jobId, jobTitle }
   
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[500px]">
+      <DialogContent className="sm:max-w-[500px] border-[#e2e735]/40">
         <DialogHeader>
-          <DialogTitle className="text-xl">Apply for {jobTitle}</DialogTitle>
+          <DialogTitle className="text-xl">Join Our Garden: {jobTitle}</DialogTitle>
           <DialogDescription>
-            Fill in your details below to apply for this position. We'll be in touch soon!
+            Plant your career with us! Fill in your details below to apply for this position.
           </DialogDescription>
         </DialogHeader>
         

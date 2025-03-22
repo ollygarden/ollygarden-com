@@ -6,10 +6,10 @@ import * as z from "zod";
 import { supabase } from "@/integrations/supabase/client";
 import { usePostHog } from "@/hooks/use-posthog";
 import { useToast } from "@/hooks/use-toast";
+import CustomFormField from "./FormField";
 
 // UI components
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+import { Form } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import { DialogFooter } from "@/components/ui/dialog";
 
@@ -123,60 +123,33 @@ export default function ApplicationForm({ jobId, jobTitle, onSuccess, onCancel }
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <FormField
-          control={form.control}
-          name="fullName"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Full Name</FormLabel>
-              <FormControl>
-                <Input placeholder="John Doe" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
+        <CustomFormField 
+          form={form} 
+          name="fullName" 
+          label="Full Name" 
+          placeholder="John Doe" 
         />
         
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email Address</FormLabel>
-              <FormControl>
-                <Input type="email" placeholder="john.doe@example.com" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
+        <CustomFormField 
+          form={form} 
+          name="email" 
+          label="Email Address" 
+          placeholder="john.doe@example.com" 
+          type="email" 
         />
         
-        <FormField
-          control={form.control}
-          name="linkedinUrl"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>LinkedIn Profile URL</FormLabel>
-              <FormControl>
-                <Input placeholder="https://linkedin.com/in/johndoe" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
+        <CustomFormField 
+          form={form} 
+          name="linkedinUrl" 
+          label="LinkedIn Profile URL" 
+          placeholder="https://linkedin.com/in/johndoe" 
         />
         
-        <FormField
-          control={form.control}
-          name="githubUrl"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>GitHub/Portfolio URL</FormLabel>
-              <FormControl>
-                <Input placeholder="https://github.com/johndoe" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
+        <CustomFormField 
+          form={form} 
+          name="githubUrl" 
+          label="GitHub/Portfolio URL" 
+          placeholder="https://github.com/johndoe" 
         />
         
         <DialogFooter className="mt-6">
