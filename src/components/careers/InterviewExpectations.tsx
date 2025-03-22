@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { Sprout, Code, Wrench, Trophy, Smile } from "lucide-react";
+import { Sprout, Code, Wrench, Trophy, Smile, Seedling } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function InterviewExpectations() {
@@ -29,6 +29,11 @@ export default function InterviewExpectations() {
       icon: Smile,
       title: "Express Your Passion",
       description: "Share what excites you about development, observability, or technology in general. Your enthusiasm is as important as your skills."
+    },
+    {
+      icon: Seedling,
+      title: "Present Your Process",
+      description: "Walk us through your development methodology. How you test, refactor, and maintain code quality shows us how you'll help our garden thrive."
     }
   ];
 
