@@ -4,6 +4,7 @@ import CareerHero from "@/components/CareerHero";
 import CompanyMission from "@/components/careers/CompanyMission";
 import JobListingSection from "@/components/careers/JobListingSection";
 import BenefitsSection from "@/components/careers/BenefitsSection";
+import InterviewExpectations from "@/components/careers/InterviewExpectations";
 import { Job, getJobs } from "@/data/jobs";
 
 export default function Careers() {
@@ -24,6 +25,9 @@ export default function Careers() {
       
       {/* Job Listings */}
       <JobListingSection jobs={jobs} />
+      
+      {/* Interview Expectations */}
+      <InterviewExpectations />
       
       {/* Company Benefits */}
       <BenefitsSection />
