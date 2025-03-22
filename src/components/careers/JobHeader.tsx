@@ -20,11 +20,6 @@ export default function JobHeader({ job }: JobHeaderProps) {
         <Badge variant="outline" className="bg-white/10 text-olly-white/70">
           {job.category}
         </Badge>
-        {job.salary && (
-          <Badge className="bg-olly-accent/20 text-olly-accent font-medium border-transparent">
-            {job.salary}
-          </Badge>
-        )}
       </div>
       <p className="text-olly-white/90 text-lg">{job.description}</p>
     </div>
