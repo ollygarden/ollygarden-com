@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import JobListing from "@/components/JobListing";
 import { Job } from "@/data/jobs";
+import ApplicationModal from "./ApplicationModal";
 
 interface JobListingSectionProps {
   jobs: Job[];
@@ -73,7 +74,7 @@ export default function JobListingSection({ jobs }: JobListingSectionProps) {
                   type={job.type}
                   description={job.description}
                   requirements={job.requirements}
-                  bonusPoints={job.bonusPoints} // Pass bonus points to the component
+                  bonusPoints={job.bonusPoints}
                 />
               ))
             ) : (
@@ -92,6 +93,8 @@ export default function JobListingSection({ jobs }: JobListingSectionProps) {
 
 // Internal component for the open application section
 function OpenApplication() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
@@ -111,13 +114,17 @@ function OpenApplication() {
           "bg-olly-accent text-olly-dark hover:bg-olly-accent/90",
           "focus:outline-none focus:ring-2 focus:ring-olly-accent/50"
         )}
-        onClick={() => {
-          // This would link to a general application form
-          alert("General application form would open here");
-        }}
+        onClick={() => setIsModalOpen(true)}
       >
         Submit Open Application
       </button>
+      
+      <ApplicationModal
+        open={isModalOpen}
+        onOpenChange={setIsModalOpen}
+        jobId="open-application"
+        jobTitle="Open Application"
+      />
     </motion.div>
   );
 }

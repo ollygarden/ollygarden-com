@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -106,7 +105,7 @@ export default function JobDetail() {
               {job.bonusPoints && <JobBonusPoints bonusPoints={job.bonusPoints} />}
               
               <div className="flex justify-center mt-8">
-                <ApplyButton jobTitle={job.title} />
+                <ApplyButton jobId={job.id} jobTitle={job.title} />
               </div>
             </div>
           </motion.div>

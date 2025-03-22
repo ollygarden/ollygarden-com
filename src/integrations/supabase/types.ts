@@ -33,6 +33,39 @@ export type Database = {
         }
         Relationships: []
       }
+      job_applications: {
+        Row: {
+          created_at: string
+          email: string
+          full_name: string
+          github_url: string | null
+          id: string
+          job_id: string
+          job_title: string
+          linkedin_url: string | null
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          full_name: string
+          github_url?: string | null
+          id?: string
+          job_id: string
+          job_title: string
+          linkedin_url?: string | null
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          full_name?: string
+          github_url?: string | null
+          id?: string
+          job_id?: string
+          job_title?: string
+          linkedin_url?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

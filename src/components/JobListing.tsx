@@ -1,9 +1,9 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronDown, ChevronRight, Check, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
+import ApplyButton from "@/components/careers/ApplyButton";
 
 interface JobListingProps {
   id: string;
@@ -12,7 +12,7 @@ interface JobListingProps {
   type: string;
   description: string;
   requirements: string[];
-  bonusPoints?: string[]; // Add bonus points as an optional prop
+  bonusPoints?: string[];
   salary?: string;
 }
 
@@ -23,7 +23,7 @@ export default function JobListing({
   type, 
   description, 
   requirements,
-  bonusPoints, // Add bonus points to destructuring
+  bonusPoints,
   salary
 }: JobListingProps) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -93,7 +93,6 @@ export default function JobListing({
             </ul>
           </div>
           
-          {/* Add Bonus Points section */}
           {bonusPoints && bonusPoints.length > 0 && (
             <div className="mb-4">
               <h4 className="font-medium text-olly-accent mb-3">Bonus Points</h4>
@@ -109,20 +108,7 @@ export default function JobListing({
           )}
           
           <div className="flex flex-col sm:flex-row gap-3">
-            <button 
-              className={cn(
-                "px-6 py-3 rounded-md font-medium",
-                "bg-olly-accent text-olly-dark hover:bg-olly-accent/90",
-                "transition-all duration-300 focus:ring-2 focus:ring-olly-accent/50"
-              )}
-              onClick={(e) => {
-                e.stopPropagation();
-                // This would typically link to an application form
-                alert("Application process would start here");
-              }}
-            >
-              Apply Now
-            </button>
+            <ApplyButton jobId={id} jobTitle={title} />
             
             <Link
               to={`/careers/${id}`}
