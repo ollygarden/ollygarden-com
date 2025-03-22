@@ -6,7 +6,7 @@ import { ChevronDown, ChevronRight, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface JobListingProps {
-  id: number;
+  id: string; // Changed from number to string to match the job data
   title: string;
   location: string;
   type: string;
