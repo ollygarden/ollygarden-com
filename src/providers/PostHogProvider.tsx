@@ -15,6 +15,7 @@ export function PostHogProvider({ children }: PostHogProviderProps) {
     // Using the public key which is safe to expose in client-side code
     posthog.init('phc_hOMa6r00550tdhY9ckVgJP40DP26Luc5VK7BZlIYuMJ', {
       api_host: 'https://ph.olly.garden',
+      ui_host: 'https://eu.i.posthog.com',
       // Disable in development
       loaded: (posthog) => {
         if (process.env.NODE_ENV === 'development') {
