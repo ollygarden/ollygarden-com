@@ -4,8 +4,7 @@ import CareerHero from "@/components/CareerHero";
 import CompanyMission from "@/components/careers/CompanyMission";
 import JobListingSection from "@/components/careers/JobListingSection";
 import BenefitsSection from "@/components/careers/BenefitsSection";
-import { Job } from "@/data/jobs";
-import { getJobs } from "@/data/jobs";
+import { Job, getJobs } from "@/data/jobs";
 
 export default function Careers() {
   const [jobs, setJobs] = useState<Job[]>([]);
