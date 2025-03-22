@@ -10,6 +10,7 @@ import JobDetail from "./pages/JobDetail";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { PostHogProvider } from "./providers/PostHogProvider";
 
 const queryClient = new QueryClient();
 
@@ -19,18 +20,20 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="flex flex-col min-h-screen">
-          <Navbar />
-          <main className="flex-grow pt-16">
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/careers/:id" element={<JobDetail />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
+        <PostHogProvider>
+          <div className="flex flex-col min-h-screen">
+            <Navbar />
+            <main className="flex-grow pt-16">
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/careers/:id" element={<JobDetail />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
+            <Footer />
+          </div>
+        </PostHogProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
