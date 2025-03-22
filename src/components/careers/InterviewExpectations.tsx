@@ -62,7 +62,10 @@ export default function InterviewExpectations() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
-              className="glass-effect rounded-xl p-6 flex flex-col items-center text-center"
+              className={cn(
+                "glass-effect rounded-xl p-6 flex flex-col items-center text-center",
+                "transition-all duration-300 hover:border-olly-accent/30 hover:transform hover:scale-[1.02]"
+              )}
             >
               <div className={cn(
                 "w-12 h-12 rounded-full flex items-center justify-center mb-4",
