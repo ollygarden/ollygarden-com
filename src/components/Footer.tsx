@@ -48,20 +48,6 @@ export default function Footer() {
           <p className="text-olly-white/60 text-xs">
             &copy; {currentYear} OllyGarden. All rights reserved.
           </p>
-          <div className="mt-4 md:mt-0 flex space-x-4">
-            <a
-              href="#"
-              className="text-olly-white/60 hover:text-olly-accent transition-all-300 text-xs"
-            >
-              Privacy Policy
-            </a>
-            <a
-              href="#"
-              className="text-olly-white/60 hover:text-olly-accent transition-all-300 text-xs"
-            >
-              Terms of Service
-            </a>
-          </div>
         </div>
       </div>
     </footer>
