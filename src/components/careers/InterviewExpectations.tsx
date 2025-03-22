@@ -13,7 +13,7 @@ export default function InterviewExpectations() {
     {
       icon: Code,
       title: "Share Your Code",
-      description: "We love seeing your code, especially pet projects you're passionate about. B2B SaaS applications are particularly relevant to our work."
+      description: "We'd love to see your code, especially pet projects you're passionate about. B2B SaaS applications are particularly relevant to our work."
     },
     {
       icon: Wrench,
@@ -33,7 +33,7 @@ export default function InterviewExpectations() {
     {
       icon: LeafyGreen,
       title: "Present Your Process",
-      description: "Walk us through your development methodology. How you test, refactor, and maintain code quality shows us how you'll help our garden thrive."
+      description: "Walk us through your development methodology. How you test, debug, refactor, and maintain code quality shows us how you'll help our garden thrive."
     }
   ];
 
@@ -51,7 +51,7 @@ export default function InterviewExpectations() {
             How to Cultivate a Successful Interview
           </h2>
           <p className="text-olly-white/70 max-w-3xl mx-auto">
-            At OllyGarden, we're looking for passionate developers who can help our telemetry ecosystem thrive. Here's how to showcase your talents during our interview process.
+            At OllyGarden, we're looking for passionate engineers who can help our telemetry ecosystem thrive. Here's how to showcase your talents during our interview process.
           </p>
         </motion.div>
         
@@ -86,7 +86,7 @@ export default function InterviewExpectations() {
             In Short: It's Time to Bloom!
           </h3>
           <p className="text-olly-white/90 text-lg">
-            Our interview process is your opportunity to shine. We want to see the real you – your code, your process, your passion. Show us how you've grown as a developer and how you could help our garden of innovation flourish. Don't be shy about showcasing your achievements and the unique perspective you bring to the table!
+            Our interview process is your opportunity to shine. We want to see the real you – your code, your process, your passion. Show us how you've grown as an engineer and how you could help our garden of innovation flourish. Don't be shy about showcasing your achievements and the unique perspective you bring to the table!
           </p>
         </motion.div>
       </div>
