@@ -8,88 +8,92 @@ export interface Job {
   category: string;
   description: string;
   requirements: string[];
-  responsibilities: string[]; // New field
-  bonusPoints: string[]; // New field
+  responsibilities: string[];
+  bonusPoints: string[];
 }
 
-// Sample job data with gardening theme
 const jobs: Job[] = [
   {
-    id: "frontend-engineer",
-    title: "Frontend Engineer",
+    id: "founding-frontend-engineer",
+    title: "Founding Frontend Engineer",
     location: "Remote",
     type: "Full-time",
     category: "frontend",
-    description: "Help us cultivate beautiful and intuitive user interfaces for our telemetry platform. Like a skilled gardener arranges plants for visual appeal, you'll craft elegant UI components that make data visualization bloom.",
+    description: "As a Founding Frontend Engineer, you’ll be a key gardener in our product development, designing and cultivating intuitive interfaces that help observability engineers harvest insights effortlessly.",
     requirements: [
-      "3+ years experience in React ecosystem",
-      "Proficiency with TypeScript and modern CSS",
-      "Experience with data visualization libraries",
-      "Understanding of web performance optimization"
+      "Proficiency in React.js, Next.js, or Vue.js: your primary tools for crafting lush, interactive experiences",
+      "A keen eye for data visualization, turning complex observability metrics into beautifully arranged dashboards",
+      "Empathy for highly technical users, creating an experience that feels as natural as walking through a well-tended garden",
+      "A strong sense of observability and monitoring, knowing that bugs are weeds best removed early",
+      "Curiosity to explore new tools and techniques, especially those that can help fertilize productivity",
+      "Rooted in either Latin America or Europe",
     ],
     responsibilities: [
-      "Design and implement UI components that help our customers' data flourish",
-      "Nurture our component library with reusable, accessible patterns",
-      "Cross-pollinate ideas with the design team to create intuitive user experiences",
-      "Prune unnecessary code and improve performance across the application"
+      "Sow the seeds of innovation by owning the frontend aspects of our products, collaborating closely with founders and product designers to shape each new growth cycle",
+      "Cultivate deep roots with design partners and customers, gathering feedback to refine the user experience and help them navigate their telemetry landscape more effectively",
+      "Tend to the UI, ensuring a seamless integration between the frontend and our backend systems",
+      "Contribute to the OpenTelemetry ecosystem, helping the broader observability community grow stronger",
     ],
     bonusPoints: [
-      "Experience with garden-variety animation libraries like Framer Motion",
-      "Knowledge of WebGL or Canvas for advanced visualizations",
-      "Contributions to open-source projects in the UI/UX space",
-      "A green thumb for accessibility and internationalization"
+      "Experience with B2B SaaS products, especially developer tools",
+      "Passion for open-source communities, contributing to shared knowledge and collaborative growth",
+      "Enthusiasm for public speaking, helping others cultivate their understanding of observability at international conferences",
     ]
   },
   {
-    id: "backend-engineer",
-    title: "Backend Engineer",
+    id: "founding-backend-engineer",
+    title: "Founding Backend Engineer",
     location: "Remote",
     type: "Full-time",
     category: "backend",
     description: "Build the root system of our telemetry platform. Just as roots support and nourish plants, you'll create robust API services and data pipelines that support our growing ecosystem.",
     requirements: [
-      "4+ years experience with backend development",
-      "Proficiency in Go, Rust or similar languages",
-      "Experience with distributed systems",
-      "Knowledge of database technologies and performance optimization"
+      "Strong experience with Go and/or Rust, with a focus on systems programming, distributed systems, or backend infrastructure",
+      "Familiarity with telemetry systems, streaming data, or observability pipelines",
+      "Comfort working with protocols like OTLP, gRPC, HTTP, and message queues (NATS, Kafka, etc)",
+      "An interest in resource efficiency: you care about runtime performance, memory footprint, and reducing carbon costs",
+      "A collaborative, open mindset and willingness to dig deep into complex problems",
+      "Rooted in either Latin America or Europe",
     ],
     responsibilities: [
-      "Cultivate robust API services that can scale with our growing customer base",
-      "Plant efficient data pipelines to process high volumes of telemetry data",
-      "Maintain the soil of our infrastructure - databases, caching systems, and message queues",
-      "Collaborate with the frontend team to ensure our full-stack garden thrives"
+      "Build and maintain the root systems of our platform—designing scalable, efficient backend services in Go and Rust",
+      "Collaborate closely with our founders and product team to architect solutions that allow customers to harvest insights from massive volumes of telemetry data",
+      "Help us grow and care for our OpenTelemetry-native architecture, building tools that are composable, resilient, and vendor-neutral",
+      "Contribute to open-source projects, especially those in the OpenTelemetry ecosystem, planting seeds of value for the community"
     ],
     bonusPoints: [
-      "Experience with telemetry standards like OpenTelemetry",
-      "Familiarity with time-series databases for metrics data",
-      "Knowledge of cloud-native technologies and container orchestration",
-      "Open-source contributions to backend or infrastructure projects"
+      "Familiarity with observability data formats, distributed systems, and the OpenTelemetry ecosystem",
+      "Experience with B2B SaaS products, especially developer tools",
+      "Passion for open-source communities, contributing to shared knowledge and collaborative growth",
+      "Enthusiasm for public speaking, helping others cultivate their understanding of observability at international conferences",
     ]
   },
   {
-    id: "data-scientist",
-    title: "Data Scientist",
+    id: "founding-data-engineer",
+    title: "Founding Data Engineer",
     location: "Remote",
     type: "Full-time",
     category: "data",
     description: "Become our master botanist, studying the patterns in our customers' telemetry data. Like analyzing soil composition and growth patterns, you'll extract meaningful insights that help our platform grow stronger.",
     requirements: [
-      "3+ years experience in data science or machine learning",
-      "Proficiency with Python and data analysis libraries",
-      "Experience with time-series analysis",
-      "Strong understanding of statistical methods"
+      "Experience designing, training, and deploying machine learning models in production",
+      "Experience with generative AI and LLMs, including fine-tuning, embeddings, and RAG architectures",
+      "Strong programming skills in Python (bonus: Rust or Go), and experience working with tools like scikit-learn, HuggingFace, LangChain, or similar",
+      "A product-minded approach—your models aren’t just clever, they’re useful, usable, and scalable",
+      "Rooted in either Latin America or Europe",
     ],
     responsibilities: [
-      "Analyze telemetry data patterns like a botanist studies plant growth",
-      "Develop algorithms to detect anomalies in telemetry data",
-      "Create models that help predict system behavior and prevent wilting services",
-      "Collaborate with product teams to implement data-driven features"
+      "Cultivate knowledge from massive volumes of telemetry data, mining traces, metrics, and logs for actionable insights",
+      "Design and implement ML models and pipelines that help teams identify inefficiencies, anomalies, and opportunities for optimization",
+      "Explore and apply cutting-edge AI techniques (LLMs, RAG, embedding search, few-shot learning, etc.) to make observability more interactive, insightful, and adaptive",
+      "Help define the future of our platform by transforming raw data into intelligent automation—detecting patterns, suggesting instrumentation improvements, and guiding decisions",
+      "Collaborate with product and engineering teams to ship features that scale, working with real-world telemetry from complex systems",
     ],
     bonusPoints: [
-      "Experience with observability or monitoring systems",
-      "Knowledge of unsupervised learning techniques for anomaly detection",
-      "Familiarity with large-scale data processing frameworks",
-      "Published research in relevant fields"
+      "Familiarity with observability data formats, distributed systems, and the OpenTelemetry ecosystem",
+      "Experience with B2B SaaS products, especially developer tools",
+      "Passion for open-source communities, contributing to shared knowledge and collaborative growth",
+      "Enthusiasm for public speaking, helping others cultivate their understanding of observability at international conferences",
     ]
   }
 ];

@@ -46,7 +46,7 @@ export default function Footer() {
         
         <div className="mt-8 pt-4 border-t border-white/5 flex flex-col md:flex-row justify-between items-center">
           <p className="text-olly-white/60 text-xs">
-            &copy; {currentYear} OllyGarden. All rights reserved.
+            &copy; {currentYear} OllyGarden, Inc. All rights reserved.
           </p>
         </div>
       </div>

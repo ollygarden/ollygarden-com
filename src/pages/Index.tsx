@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Index() {
   const heroRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -16,13 +16,13 @@ export default function Index() {
         heroRef.current.style.transform = `translateY(${scrollY * 0.25}px)`;
       }
     };
-    
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
+
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
@@ -33,7 +33,7 @@ export default function Index() {
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-olly-accent/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-olly-accent/5 rounded-full blur-3xl"></div>
         </div>
-        
+
         {/* Hero Content */}
         <div className="container mx-auto px-6 py-12 md:py-24 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
@@ -45,15 +45,14 @@ export default function Index() {
               />
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-olly-white">
-              <span className="block">Coming Soon</span>
-              <span className="block mt-2 text-olly-accent">
-                Transforming Telemetry Pipelines
+              <span className="block">
+                There's a lot of bad telemetry out there.
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-olly-white/80 max-w-2xl mx-auto leading-relaxed">
               We're building the next generation of observability tools to help engineers unlock insights from their telemetry data.
             </p>
-            
+
             <div className="flex flex-col md:flex-row gap-4 justify-center mt-8">
               <Link
                 to="/careers"
@@ -70,7 +69,7 @@ export default function Index() {
           </div>
         </div>
       </section>
-      
+
       {/* Contact Form Section */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-olly-dark/70 to-olly-dark/90 z-0"></div>
@@ -84,7 +83,7 @@ export default function Index() {
                 Interested in learning more? Send us a message and we'll get back to you soon.
               </p>
             </div>
-            
+
             <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 md:p-8 shadow-lg animate-slideUp">
               <div className="flex flex-col lg:flex-row gap-12">
                 <div className="lg:w-1/2">
@@ -103,7 +102,7 @@ export default function Index() {
                       </div>
                       <div>
                         <p className="text-sm text-olly-white/60">Email</p>
-                        <p className="text-olly-white">contact@ollygarden.com</p>
+                        <p className="text-olly-white">contact@olly.garden</p>
                       </div>
                     </div>
                     <div className="flex items-center">

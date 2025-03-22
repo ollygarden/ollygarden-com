@@ -45,7 +45,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send email notification to hiring team
     const emailResponse = await resend.emails.send({
       from: "OllyGarden Careers <careers@olly.garden>",
-      to: ["hiring@olly.garden"],
+      to: ["careers@olly.garden"],
       subject: `New Garden Enthusiast: ${jobTitle} (Job ID: ${jobId})`,
       html: `
         <h2>New Garden Volunteer Application</h2>
@@ -69,9 +69,9 @@ const handler = async (req: Request): Promise<Response> => {
       html: `
         <h2>Thank You for Your Application</h2>
         <p>Dear ${applicant.fullName},</p>
-        <p>Thank you for applying to the <strong>${jobTitle}</strong> position at OllyGarden. We've received your application and our garden team will review it shortly.</p>
+        <p>Thank you for applying to the <strong>${jobTitle}</strong> position at OllyGarden. We've received your application and our team will review it shortly.</p>
         <p>We appreciate your interest in joining our garden of innovation!</p>
-        <p>Best regards,<br>The OllyGarden Gardening Team</p>
+        <p>Best regards,<br>The OllyGarden Team</p>
       `,
     });
 

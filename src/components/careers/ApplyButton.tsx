@@ -27,7 +27,7 @@ export default function ApplyButton({ jobTitle, jobId }: ApplyButtonProps) {
         )}
         onClick={handleApply}
       >
-        Plant Your Career
+        Apply
       </button>
       
       <ApplicationModal 
