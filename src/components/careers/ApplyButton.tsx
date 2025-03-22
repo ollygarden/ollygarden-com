@@ -22,12 +22,12 @@ export default function ApplyButton({ jobTitle, jobId }: ApplyButtonProps) {
       <button 
         className={cn(
           "px-8 py-4 rounded-md font-medium",
-          "bg-olly-accent text-olly-dark hover:bg-olly-accent/90",
-          "transition-all duration-300 focus:ring-2 focus:ring-olly-accent/50"
+          "bg-[#e2e735] text-olly-dark hover:bg-[#e2e735]/90",
+          "transition-all duration-300 focus:ring-2 focus:ring-[#e2e735]/50"
         )}
         onClick={handleApply}
       >
-        Apply for this Position
+        Plant Your Career
       </button>
       
       <ApplicationModal 

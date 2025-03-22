@@ -70,13 +70,9 @@ export default function ApplicationModal({ open, onOpenChange, jobId, jobTitle }
         
       if (insertError) throw new Error(`Error saving application: ${insertError.message}`);
       
-      // 2. Send email notification 
-      const response = await fetch("/api/send-application-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
+      // 2. Send email notification using Supabase Edge Function
+      const { error } = await supabase.functions.invoke("send-application-email", {
+        body: {
           jobId,
           jobTitle,
           applicant: {
@@ -85,18 +81,18 @@ export default function ApplicationModal({ open, onOpenChange, jobId, jobTitle }
             linkedinUrl: data.linkedinUrl,
             githubUrl: data.githubUrl,
           },
-        }),
+        },
       });
       
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(`Error sending email: ${errorData.error}`);
+      if (error) {
+        throw new Error(`Error sending email: ${error.message}`);
       }
       
       // Success toast
       toast({
         title: "Application Submitted!",
         description: "Thank you for applying. We'll be in touch soon!",
+        variant: "default",
       });
       
       // Reset form and close modal
