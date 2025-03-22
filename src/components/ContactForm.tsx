@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
+import { supabase } from "@/integrations/supabase/client";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -21,16 +22,50 @@ export default function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission with timeout
-    setTimeout(() => {
+    try {
+      // 1. Save to Supabase database
+      const { error: dbError } = await supabase
+        .from('contact_submissions')
+        .insert([
+          { 
+            name: formData.name,
+            email: formData.email,
+            message: formData.message
+          }
+        ]);
+
+      if (dbError) throw new Error(dbError.message);
+      
+      // 2. Send email notification
+      const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        }
+      });
+
+      if (emailError) throw new Error('Failed to send email notification');
+      
+      // Success
       toast({
         title: "Message sent successfully!",
         description: "We'll get back to you soon.",
         variant: "default",
       });
+      
+      // Reset form
       setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error('Contact form submission error:', error);
+      toast({
+        title: "Error sending message",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
   
   return (
