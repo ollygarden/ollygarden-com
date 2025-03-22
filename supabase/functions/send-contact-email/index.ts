@@ -37,8 +37,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send email notification to admin
     const emailResponse = await resend.emails.send({
-      from: "OllyGarden Website <onboarding@resend.dev>",
-      to: ["contact@ollygarden.com"],
+      from: "OllyGarden Website <contact@olly.garden>",
+      to: ["contact@olly.garden"],
       subject: "New Contact Form Submission",
       html: `
         <h2>New Contact Form Submission</h2>
