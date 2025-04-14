@@ -14,33 +14,6 @@ export interface Job {
 
 const jobs: Job[] = [
   {
-    id: "founding-frontend-engineer",
-    title: "Founding Frontend Engineer",
-    location: "Remote",
-    type: "Full-time",
-    category: "frontend",
-    description: "As a Founding Frontend Engineer, you’ll be a key gardener in our product development, designing and cultivating intuitive interfaces that help observability engineers harvest insights effortlessly.",
-    requirements: [
-      "Proficiency in React.js, Next.js, or Vue.js: your primary tools for crafting lush, interactive experiences",
-      "A keen eye for data visualization, turning complex observability metrics into beautifully arranged dashboards",
-      "Empathy for highly technical users, creating an experience that feels as natural as walking through a well-tended garden",
-      "A strong sense of observability and monitoring, knowing that bugs are weeds best removed early",
-      "Curiosity to explore new tools and techniques, especially those that can help fertilize productivity",
-      "Rooted in either Latin America or Europe",
-    ],
-    responsibilities: [
-      "Sow the seeds of innovation by owning the frontend aspects of our products, collaborating closely with founders and product designers to shape each new growth cycle",
-      "Cultivate deep roots with design partners and customers, gathering feedback to refine the user experience and help them navigate their telemetry landscape more effectively",
-      "Tend to the UI, ensuring a seamless integration between the frontend and our backend systems",
-      "Contribute to the OpenTelemetry ecosystem, helping the broader observability community grow stronger",
-    ],
-    bonusPoints: [
-      "Experience with B2B SaaS products, especially developer tools",
-      "Passion for open-source communities, contributing to shared knowledge and collaborative growth",
-      "Enthusiasm for public speaking, helping others cultivate their understanding of observability at international conferences",
-    ]
-  },
-  {
     id: "founding-backend-engineer",
     title: "Founding Backend Engineer",
     location: "Remote",
