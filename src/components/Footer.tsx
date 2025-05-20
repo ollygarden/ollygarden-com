@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { ExternalLink } from "lucide-react";
 
@@ -40,6 +39,18 @@ export default function Footer() {
               className="text-olly-white/80 hover:text-olly-accent transition-all-300 text-sm"
             >
               Careers
+            </Link>
+            <Link
+              to="/privacy-policy"
+              className="text-olly-white/80 hover:text-olly-accent transition-all-300 text-sm"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              to="/terms-of-use"
+              className="text-olly-white/80 hover:text-olly-accent transition-all-300 text-sm"
+            >
+              Terms of Use
             </Link>
           </div>
         </div>
