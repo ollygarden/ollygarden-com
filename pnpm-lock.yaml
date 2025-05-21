@@ -94,7 +94,7 @@ importers:
         version: 1.2.7(@types/react-dom@19.1.5(@types/react@19.1.4))(@types/react@19.1.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@supabase/supabase-js':
         specifier: ^2.49.4
-        version: 2.49.6
+        version: 2.49.7
       '@tanstack/react-query':
         specifier: ^5.74.3
         version: 5.76.1(react@19.1.0)
@@ -169,7 +169,7 @@ importers:
         version: 1.1.2(@types/react-dom@19.1.5(@types/react@19.1.4))(@types/react@19.1.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       zod:
         specifier: ^3.24.2
-        version: 3.25.7
+        version: 3.25.12
     devDependencies:
       '@eslint/js':
         specifier: ^9.24.0
@@ -179,7 +179,7 @@ importers:
         version: 0.5.16(tailwindcss@3.4.17)
       '@types/node':
         specifier: ^22.14.1
-        version: 22.15.19
+        version: 22.15.21
       '@types/react':
         specifier: ^19.1.2
         version: 19.1.4
@@ -188,7 +188,7 @@ importers:
         version: 19.1.5(@types/react@19.1.4)
       '@vitejs/plugin-react-swc':
         specifier: ^3.8.1
-        version: 3.9.0(vite@6.3.5(@types/node@22.15.19)(jiti@1.21.7)(yaml@2.8.0))
+        version: 3.9.0(vite@6.3.5(@types/node@22.15.21)(jiti@1.21.7)(yaml@2.8.0))
       autoprefixer:
         specifier: ^10.4.21
         version: 10.4.21(postcss@8.5.3)
@@ -206,7 +206,7 @@ importers:
         version: 16.1.0
       lovable-tagger:
         specifier: ^1.1.8
-        version: 1.1.8(vite@6.3.5(@types/node@22.15.19)(jiti@1.21.7)(yaml@2.8.0))
+        version: 1.1.8(vite@6.3.5(@types/node@22.15.21)(jiti@1.21.7)(yaml@2.8.0))
       postcss:
         specifier: ^8.5.3
         version: 8.5.3
@@ -221,7 +221,7 @@ importers:
         version: 8.32.1(eslint@9.27.0(jiti@1.21.7))(typescript@5.8.3)
       vite:
         specifier: ^6.2.6
-        version: 6.3.5(@types/node@22.15.19)(jiti@1.21.7)(yaml@2.8.0)
+        version: 6.3.5(@types/node@22.15.21)(jiti@1.21.7)(yaml@2.8.0)
 
 packages:
 
@@ -1260,14 +1260,14 @@ packages:
   '@supabase/postgrest-js@1.19.4':
     resolution: {integrity: sha512-O4soKqKtZIW3olqmbXXbKugUtByD2jPa8kL2m2c1oozAO11uCcGrRhkZL0kVxjBLrXHE0mdSkFsMj7jDSfyNpw==}
 
-  '@supabase/realtime-js@2.11.8':
-    resolution: {integrity: sha512-H0VASfG3FGkoPL56AWs0z9Gu0w8luESwzlyvEKZgC9Aqxz16YAfkId+lcMYxuYMXF/WAhLc4lSbunB2+s3rkHg==}
+  '@supabase/realtime-js@2.11.2':
+    resolution: {integrity: sha512-u/XeuL2Y0QEhXSoIPZZwR6wMXgB+RQbJzG9VErA3VghVt7uRfSVsjeqd7m5GhX3JR6dM/WRmLbVR8URpDWG4+w==}
 
   '@supabase/storage-js@2.7.1':
     resolution: {integrity: sha512-asYHcyDR1fKqrMpytAS1zjyEfvxuOIp1CIXX7ji4lHHcJKqyk+sLl/Vxgm4sN6u8zvuUtae9e4kDxQP2qrwWBA==}
 
-  '@supabase/supabase-js@2.49.6':
-    resolution: {integrity: sha512-ErMJ+AJNp0s/0nh8oPl4Oi5l4WAj1CzMlgVqugarJYsXMNlv03V2/J8hEYTBj5xrNEbWw6/4XnHU6mHvxIXc2w==}
+  '@supabase/supabase-js@2.49.7':
+    resolution: {integrity: sha512-hx6khHHC9GherCxTaRF91Sp3uiRtlgo8Aw+MUC5hck/DLdsIIZfbBbLzXqiiDUdGDeERagmFVanI93QDZe+Nww==}
 
   '@swc/core-darwin-arm64@1.11.24':
     resolution: {integrity: sha512-dhtVj0PC1APOF4fl5qT2neGjRLgHAAYfiVP8poJelhzhB/318bO+QCFWAiimcDoyMgpCXOhTp757gnoJJrheWA==}
@@ -1402,8 +1402,8 @@ packages:
   '@types/ms@2.1.0':
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
 
-  '@types/node@22.15.19':
-    resolution: {integrity: sha512-3vMNr4TzNQyjHcRZadojpRaD9Ofr6LsonZAoQ+HMUa/9ORTPoxVIw0e0mpqWpdjj8xybyCM+oKOUH2vwFu/oEw==}
+  '@types/node@22.15.21':
+    resolution: {integrity: sha512-EV/37Td6c+MgKAbkcLG6vqZ2zEYHD7bvSrzqqs2RIhbA6w3x+Dqz8MZM3sP6kGTeLrdoOgKZe+Xja7tUB2DNkQ==}
 
   '@types/phoenix@1.6.6':
     resolution: {integrity: sha512-PIzZZlEppgrpoT2QgbnDU+MMzuR6BbCjllj0bM70lWoejMeNJAxCchxnv7J3XFkI8MpygtRpzXrIlmWUBclP5A==}
@@ -2794,8 +2794,8 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  zod@3.25.7:
-    resolution: {integrity: sha512-YGdT1cVRmKkOg6Sq7vY7IkxdphySKnXhaUmFI4r4FcuFVNgpCb9tZfNwXbT6BPjD5oz0nubFsoo9pIqKrDcCvg==}
+  zod@3.25.12:
+    resolution: {integrity: sha512-A8e9eiwm2L5YEupdjn1YcxL1ZDWuL3Bc4JKvLwUrpKZZtRUDOijR7XXsV5WMuUCZPc1tFYO5yfH14STI08MquA==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -3767,7 +3767,7 @@ snapshots:
     dependencies:
       '@supabase/node-fetch': 2.6.15
 
-  '@supabase/realtime-js@2.11.8':
+  '@supabase/realtime-js@2.11.2':
     dependencies:
       '@supabase/node-fetch': 2.6.15
       '@types/phoenix': 1.6.6
@@ -3781,13 +3781,13 @@ snapshots:
     dependencies:
       '@supabase/node-fetch': 2.6.15
 
-  '@supabase/supabase-js@2.49.6':
+  '@supabase/supabase-js@2.49.7':
     dependencies:
       '@supabase/auth-js': 2.69.1
       '@supabase/functions-js': 2.4.4
       '@supabase/node-fetch': 2.6.15
       '@supabase/postgrest-js': 1.19.4
-      '@supabase/realtime-js': 2.11.8
+      '@supabase/realtime-js': 2.11.2
       '@supabase/storage-js': 2.7.1
     transitivePeerDependencies:
       - bufferutil
@@ -3902,7 +3902,7 @@ snapshots:
 
   '@types/ms@2.1.0': {}
 
-  '@types/node@22.15.19':
+  '@types/node@22.15.21':
     dependencies:
       undici-types: 6.21.0
 
@@ -3920,7 +3920,7 @@ snapshots:
 
   '@types/ws@8.18.1':
     dependencies:
-      '@types/node': 22.15.19
+      '@types/node': 22.15.21
 
   '@typescript-eslint/eslint-plugin@8.32.1(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@1.21.7))(typescript@5.8.3))(eslint@9.27.0(jiti@1.21.7))(typescript@5.8.3)':
     dependencies:
@@ -4001,10 +4001,10 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-  '@vitejs/plugin-react-swc@3.9.0(vite@6.3.5(@types/node@22.15.19)(jiti@1.21.7)(yaml@2.8.0))':
+  '@vitejs/plugin-react-swc@3.9.0(vite@6.3.5(@types/node@22.15.21)(jiti@1.21.7)(yaml@2.8.0))':
     dependencies:
       '@swc/core': 1.11.24
-      vite: 6.3.5(@types/node@22.15.19)(jiti@1.21.7)(yaml@2.8.0)
+      vite: 6.3.5(@types/node@22.15.21)(jiti@1.21.7)(yaml@2.8.0)
     transitivePeerDependencies:
       - '@swc/helpers'
 
@@ -4580,7 +4580,7 @@ snapshots:
     dependencies:
       js-tokens: 4.0.0
 
-  lovable-tagger@1.1.8(vite@6.3.5(@types/node@22.15.19)(jiti@1.21.7)(yaml@2.8.0)):
+  lovable-tagger@1.1.8(vite@6.3.5(@types/node@22.15.21)(jiti@1.21.7)(yaml@2.8.0)):
     dependencies:
       '@babel/parser': 7.27.2
       '@babel/types': 7.27.1
@@ -4588,7 +4588,7 @@ snapshots:
       estree-walker: 3.0.3
       magic-string: 0.30.17
       tailwindcss: 3.4.17
-      vite: 6.3.5(@types/node@22.15.19)(jiti@1.21.7)(yaml@2.8.0)
+      vite: 6.3.5(@types/node@22.15.21)(jiti@1.21.7)(yaml@2.8.0)
     transitivePeerDependencies:
       - ts-node
 
@@ -5376,7 +5376,7 @@ snapshots:
       d3-time: 3.1.0
       d3-timer: 3.0.1
 
-  vite@6.3.5(@types/node@22.15.19)(jiti@1.21.7)(yaml@2.8.0):
+  vite@6.3.5(@types/node@22.15.21)(jiti@1.21.7)(yaml@2.8.0):
     dependencies:
       esbuild: 0.25.4
       fdir: 6.4.4(picomatch@4.0.2)
@@ -5385,7 +5385,7 @@ snapshots:
       rollup: 4.41.0
       tinyglobby: 0.2.13
     optionalDependencies:
-      '@types/node': 22.15.19
+      '@types/node': 22.15.21
       fsevents: 2.3.3
       jiti: 1.21.7
       yaml: 2.8.0
@@ -5423,6 +5423,6 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zod@3.25.7: {}
+  zod@3.25.12: {}
 
   zwitch@2.0.4: {}
