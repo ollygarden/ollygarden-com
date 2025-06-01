@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="mb-6 md:mb-0">
             <Link to="/" className="inline-block">
               <img 
-                src="/lovable-uploads/e09be7f4-1703-4f71-9c33-362f30eb1819.png" 
+                src="/assets/logo.png" 
                 alt="OllyGarden Logo" 
                 className="h-8"
               />
