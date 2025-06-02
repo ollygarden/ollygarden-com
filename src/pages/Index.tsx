@@ -39,7 +39,7 @@ export default function Index() {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="inline-block animate-float">
               <img
-                src="/lovable-uploads/e09be7f4-1703-4f71-9c33-362f30eb1819.png"
+                src="/assets/logo.png"
                 alt="OllyGarden Logo"
                 className="h-20 md:h-24 lg:h-28 mx-auto mb-8"
               />

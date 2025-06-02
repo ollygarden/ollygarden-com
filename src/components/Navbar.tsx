@@ -44,7 +44,7 @@ export default function Navbar() {
       <div className="container mx-auto flex items-center justify-between">
         <Link to="/" className="inline-flex items-center">
           <img 
-            src="/lovable-uploads/e09be7f4-1703-4f71-9c33-362f30eb1819.png" 
+            src="/assets/logo.png" 
             alt="OllyGarden Logo" 
             className="h-9 md:h-10"
           />
