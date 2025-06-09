@@ -14,34 +14,6 @@ export interface Job {
 
 const jobs: Job[] = [
   {
-    id: "founding-backend-engineer",
-    title: "Founding Backend Engineer",
-    location: "Remote",
-    type: "Full-time",
-    category: "backend",
-    description: "Build the root system of our telemetry platform. Just as roots support and nourish plants, you'll create robust API services and data pipelines that support our growing ecosystem.",
-    requirements: [
-      "Strong experience with Go and/or Rust, with a focus on systems programming, distributed systems, or backend infrastructure",
-      "Familiarity with telemetry systems, streaming data, or observability pipelines",
-      "Comfort working with protocols like OTLP, gRPC, HTTP, and message queues (NATS, Kafka, etc)",
-      "An interest in resource efficiency: you care about runtime performance, memory footprint, and reducing carbon costs",
-      "A collaborative, open mindset and willingness to dig deep into complex problems",
-      "Rooted in either Latin America or Europe",
-    ],
-    responsibilities: [
-      "Build and maintain the root systems of our platform—designing scalable, efficient backend services in Go and Rust",
-      "Collaborate closely with our founders and product team to architect solutions that allow customers to harvest insights from massive volumes of telemetry data",
-      "Help us grow and care for our OpenTelemetry-native architecture, building tools that are composable, resilient, and vendor-neutral",
-      "Contribute to open-source projects, especially those in the OpenTelemetry ecosystem, planting seeds of value for the community"
-    ],
-    bonusPoints: [
-      "Familiarity with observability data formats, distributed systems, and the OpenTelemetry ecosystem",
-      "Experience with B2B SaaS products, especially developer tools",
-      "Passion for open-source communities, contributing to shared knowledge and collaborative growth",
-      "Enthusiasm for public speaking, helping others cultivate their understanding of observability at international conferences",
-    ]
-  },
-  {
     id: "founding-data-engineer",
     title: "Founding Data Engineer",
     location: "Remote",
