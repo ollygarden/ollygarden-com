@@ -42,7 +42,7 @@ const jobs: Job[] = [
   },
   {
     id: "platform-engineer",
-    title: "Platform Engineer",
+    title: "Founding Platform Engineer",
     location: "Remote",
     type: "Full-time",
     category: "platform",
