@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -22,7 +21,8 @@ export default function JobListingSection({ jobs }: JobListingSectionProps) {
     { id: "all", name: "All Positions" },
     { id: "frontend", name: "Frontend" },
     { id: "data", name: "Data Science" },
-    { id: "backend", name: "Backend" }
+    { id: "backend", name: "Backend" },
+    { id: "platform", name: "Platform" }
   ];
   
   return (
